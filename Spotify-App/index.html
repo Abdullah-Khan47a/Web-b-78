@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Spotify</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Varela+Round&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&family=Varela+Round&display=swap");
+      body {
+        background-color: rgb(84, 83, 83);
+      }
+
+      * {
+        margin: 0px;
+        padding: 0px;
+      }
+
+      nav {
+        font-family: "ubunto", sans-serif;
+      }
+
+      nav ul {
+        display: flex;
+        align-items: center;
+        list-style-type: none;
+        height: 65px;
+        background-color: black;
+        color: white;
+      }
+      nav ul li {
+        padding: 0 12px;
+      }
+
+      .brand img {
+        width: 44px;
+        padding: 0 8px;
+      }
+
+      .brand {
+        display: flex;
+        align-items: center;
+        font-weight: bolder;
+        font-size: 1.3rem;
+      }
+      .container {
+        min-height: 70vh;
+        background-color: rgb(4, 95, 64);
+        color: white;
+        font-family: "varela round", sans-serif;
+        display: flex;
+        margin: 23px auto;
+        width: 70%;
+        border-radius: 12px;
+        padding: 34px;
+        background-image: url("dawn.jpg");
+        background-size: cover;
+      }
+
+      #progress {
+        width: 200vh;
+        text-align: center;
+        cursor:pointer;
+      }
+
+      .bottom {
+        position: sticky;
+        height: 130px;
+        background-color: black;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        
+      }
+      .icons {
+        margin-top: 15px;
+        cursor: pointer;
+      }
+
+      .songItem{
+
+        height: 50px;
+         display: flex;
+        background-color: silver;
+        width:100%;  
+        color:black;
+        margin:12px 0;
+        justify-content: space-between;
+        align-items: center;
+        border-radius: 34px;
+      }
+      .songItemcontainer{
+        margin-top: 34px;
+
+
+      }
+      .songItem img{
+        width:43px;
+        margin:0 23px;
+        border-radius: 34px;
+        
+}
+
+      .timestamp{
+
+        margin:0 33px;
+        
+      }
+      i{
+        cursor: pointer;
+      }
+      .songinfo{
+
+        position:absolute;
+        left:5vw;
+        font-family: "varela round", sans-serif;
+      margin-top: 20px;
+      display: flex;
+      align-items: center;
+      gap: 10PX;
+
+
+      }
+      .songinfo img{
+        width:50px;
+        opacity:0;
+        transition:opacity 0.4s ease-in;
+       
+      }
+
+
+    </style>
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li class="brand">
+          <img src="spotify_logo.png.png" alt="Spotify-logo" />Spotify
+        </li>
+        <li>Home</li>
+        <li>About</li>
+      </ul>
+    </nav>
+
+    <div class="container">
+      <div class="songlist">
+        <h1>no copyright</h1>
+        <div class="songItemcontainer">
+          <div class="songItem">
+            <img  alt="cphoto" />
+            <span class="songName">Blinding By The Lights</span>
+            <span class="songlistplay"><span class="timestamp">04:23<i class="songItemplay fa-solid fa-play"></i></span></span>
+          </div>
+          <div class="songItem">
+            <img  alt="cphoto" />
+            <span class="songName">Blinding By The Lights</span>
+            <span class="songlistplay"><span class="timestamp">04:23<i class="songItemplay fa-solid fa-play"></i></span></span>
+          </div><div class="songItem">
+            <img  alt="cphoto" />
+            <span class="songName">Blinding By The Lights</span>
+            <span class="songlistplay"><span class="timestamp">04:23<i class="songItemplay fa-solid fa-play"></i></span></span>
+          </div><div class="songItem">
+            <img  alt="cphoto" />
+            <span class="songName">Blinding By The Lights</span>
+            <span class="songlistplay"><span class="timestamp">04:23<i class="songItemplay fa-solid fa-play"></i></span></span>
+          </div><div class="songItem">
+            <img  alt="cphoto" />
+            <span class="songName">Blinding By The Lights</span>
+            <span class="songlistplay"><span class="timestamp">04:23<i class="songItemplay fa-solid fa-play"></i></span></span>
+          </div><div class="songItem">
+            <img  alt="cphoto" />
+            <span class="songName">Blinding By The Lights</span>
+            <span class="songlistplay"><span class="timestamp">04:23<i class="songItemplay fa-solid fa-play"></i></span></span>
+          </div><div class="songItem">
+            <img  alt="cphoto" />
+            <span class="songName">Blinding By The Lights</span>
+            <span class="songlistplay"><span class="timestamp">04:23<i class="songItemplay fa-solid fa-play"></i></span></span>
+          </div>
+        </div>
+      </div>
+      <div class="banner"></div>
+    </div>
+
+    <div class="bottom">
+      <input type="range" name="range" id="progress" min="0" value="0" max="100" />
+      <div class="icons">
+        <!-- fontawesome icons -->
+        <i class="fa-solid fa-2x fa-backward"></i>
+        <i class="fa-solid fa-2x fa-play" id="masterplay"></i>
+        <i class="fa-solid fa-2x fa-forward"></i>
+      </div>
+      <div class="songinfo">
+        <img src="music.gif" alt="gif" id="gif" class="songName">Blinding By The Lights-THE WEEKEND
+      </div>
+    </div>
+    <script
+      src="https://kit.fontawesome.com/8e720ebb79.js"
+      crossorigin="anonymous"
+    ></script>
+    <script >
+      console.log("Welcome To Spotify!");
+      let songindex=0;
+      let audioElement= new Audio("servis.mp3");
+      let masterplay=document.getElementById("masterplay");
+      let progressbar=document.getElementById("progress");
+      let gif=document.getElementById("gif");
+      let songitems=Array.from(document.getElementsByClassName("songItem"));
+
+
+
+
+      let songs=[
+       {songName: "Blinding By The Lights  -    The Weekend" ,filepath:"c:/Users/HOME - PC/Downloads/The Weeknd - Blinding Lights (Official Audio).mp3",coverpath:"BBTL.jpg"},
+       {songName: "Apni Dhi Schoolo Hata Le" ,filepath:"c:/Users/HOME - PC/Downloads/danace krdi pai.mp3",coverpath:"danace.jpg"},
+       {songName: "Servis Shoes Song" ,filepath:"c:/Users/HOME - PC/Downloads/servis.mp3",coverpath:"servislogo.png"},
+       {songName: "Bado Badi  -    Chahat Fateh Ali Khan" ,filepath:"c:/Users/HOME - PC/Downloads/Chahat Fateh Ali Khan - BADO BADI (Official Music Video).mp3",coverpath:"chahat.jpg"},
+       {songName: "toba Toba   -    Chahat Fateh Ali Khan" ,filepath:"c:/Users/HOME - PC/Downloads/Toba Toba Song by Chahat Fateh Ali Khan.mp3",coverpath:"chahat.jpg"},
+       {songName: "Wakka Wakka   -   Fakeera" ,filepath:"c:/Users/HOME - PC/Downloads/WAKA WAKA FUNNY PAKISTANI VERSION.mp3",coverpath:"black.jpg"},
+       {songName: "Bado Badi  -    Chahat Fateh Ali Khan" ,filepath:"c:/Users/HOME - PC/Downloads/Chahat Fateh Ali Khan - BADO BADI (Official Music Video).mp3",coverpath:"chahat.jpg"}
+      
+      ];
+
+      songitems.forEach((element,i) => {
+        
+        element.getElementsByTagName("img")[0].src=songs[i].coverpath;
+        element.getElementsByClassName("songName")[0].innerText=songs[i].songName;
+      });
+     masterplay.addEventListener("click",()=>{
+      if(audioElement.paused|| audioElement.currentTime<=0){
+       audioElement.play();
+       masterplay.classList.remove("fa-play");
+       masterplay.classList.add("fa-pause");
+       gif.style.opacity=1;
+      }
+      else{
+        audioElement.pause();
+       masterplay.classList.remove("fa-pause");
+       masterplay.classList.add("fa-play");
+       gif.style.opacity=0;
+      }
+
+
+     })
+      // audioelement.play();
+      // listen to events
+      audioElement.addEventListener("timeupdate",()=>{
+        
+        progress=parseInt((audioElement.currentTime/audioElement.duration)*100)
+        
+        progressbar.value=progress;
+      });
+      progressbar.addEventListener("change",()=>{
+
+        audioElement.currentTime=progressbar.value*audioElement.duration/100;
+      })
+
+
+      const makeAllPlays=()=>{
+       
+        Array.from(document.getElementsByClassName("songItemplay")).forEach((element)=>{
+         
+          element.classList.remove("fa-solid fa-pause");
+           element.classList.add("fa-solid fa-play");
+         
+
+        })
+      }
+      Array.from(document.getElementsByClassName("songItemplay")).forEach((element)=>{
+
+        element.addEventListener("click",(e)=>{
+        console.log(e.target);
+        makeAllPlays();
+        e.target.classList.remove("fa-solid fa-play");
+        e.target.classList.add("fa-solid fa-pause");
+      })
+      })
+    </script>
+  </body>
+</html>
